@@ -299,7 +299,7 @@ function wrapper(plugin_info) {
 
 	function exportKeys() {
 		const capsuleNames = parseCapsuleNames(settings.capsuleNames);
-		const str = ['Name\tLink\tGUID\tKeys\tCapsules', ...thisPlugin.keyCount.map((el) => [el.portalCoupler.portalTitle, `https//intel.ingress.com/?pll=${el._latlng.lat},${el._latlng.lng}`, el.portalCoupler.portalGuid, el.count, el.capsules.map(e => capsuleNames[e] || e).join(',')].join('\t'))].join('\n');
+		const str = ['Name\tLink\tGUID\tKeys\tCapsules', ...thisPlugin.keyCount.map((el) => [el.portalCoupler.portalTitle, `https://intel.ingress.com/?pll=${el._latlng.lat},${el._latlng.lng}`, el.portalCoupler.portalGuid, el.count, el.capsules.map(e => capsuleNames[e] || e).join(',')].join('\t'))].join('\n');
 		navigator.clipboard.writeText(str);
 	}
 
